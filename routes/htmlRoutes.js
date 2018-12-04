@@ -12,7 +12,7 @@ module.exports = function(app) {
   });
 
   // Load Create page
-  app.get("/create", function(req, res){
+  app.get("/create", function(req, res) {
     res.render("create");
   });
 
