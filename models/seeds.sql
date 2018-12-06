@@ -1,5 +1,5 @@
-use recipe_test;
-INSERT INTO recipes(name, ingredients, steps) 
+use wcgl;
+INSERT INTO recipes_tables(recipeName, ingredients, steps) 
 VALUES (
     'Katsudon', 
     '[
@@ -39,4 +39,51 @@ VALUES (
     ]'
 );
 
-select * from recipe_test.recipes where name = 'Katsudon';
+INSERT INTO recipes_tables(recipeName, ingredients, steps) 
+VALUES ('Wookie Cookies',
+    '[2 1/4 cups all-purpose flour
+1 teaspoon baking soda
+1 teaspoon salt
+1 teaspoon ground cinnamon
+1 cup unsalted butter, at room temperature
+1 cup packed brown sugar
+1/2 cup granulated sugar
+2 large eggs
+1 1/2 teaspoons vanilla extract
+1 cup milk chocolate chips
+1 cup semi-sweet chocolate chips]',
+'[Preheat the oven to 375°F.
+Put the flour, baking soda, salt, and cinnamon in a mixing bowl. Stir with the wooden spoon until well mixed. Set aside.
+Put the butter, brown sugar, and granulated sugar in another mixing bowl. Using the electric mixer set on high speed, beat together until well blended and creamy, about 3 minutes. (You can do this with a wooden spoon, but it will take longer.) Beat in the eggs and vanilla extract. Add the flour mixture and stir with the wooden spoon until blended. Stir in the chocolate chips.
+Scoop up a rounded tablespoonful of the dough and drop onto a baking sheet. Repeat until you have used up all the dough. Be sure to leave about 1 inch between the cookies because they spread as they bake.
+Using pot holders, put the baking sheets in the oven. Bake until golden brown, about 10 minutes.
+Again, using pot holders, remove the baking sheets from the oven. Lift the cookies from the baking sheets with a spatula, and place on cooling racks. Let cool completely.]');
+
+INSERT INTO recipes_tables(recipeName, ingredients, steps) 
+VALUES ('Rum Cake with Key Lime Buttercream Icing','[(cake)
+2 cups granulated sugar
+1 cup unsalted butter, softened
+3 large eggs, separated
+2 tsp vanilla extract
+4 cups all purpose flour
+1 tbsp baking powder
+1 tsp kosher salt
+1 1/4 cup half and half
+1/3 cup dark rum
+key lime buttercream frosting, sugar key limes and cranberries
+(key lime buttercream icing)
+1 8 ounce package cream cheese, softened
+1 cup unsalted butter, softened
+1 16 ounce package powdered sugar
+1 tbsp key lime zest, plus 1 tbsp fresh juice (about 3 key limes)
+1 tsp vanilla extract
+1/2 tsp kosher salt
+2 tbsp whole milk]',
+'[preheat over to 350 degrees. beat sugar, butter with electric mixer on medium speed until light and fluffy, about two minutes. add egg yolks, 1 at a time, beating just until blended and smooth; beat in vanilla. whisk together flour, baking soda and salt in a medium bowl. combine half and half and rum in a small bowl. add flour mixture to butter mixture alternately with rum mixture, beginning and ending with flour mixture, beating on low speed just until flour mixture is incorporated after each addition. 
+
+using clean, dry, beaters, beat egg whites in a separate bowl until stiff peaks form. gently fold into batter. divide batter evenly among 3 greased and floured 8 inch round cake pans.  bake in preheated oven until a wooden pick inserted in center comes out clean, 23-25 minutes.  transfer to wire racks and cool in pans 20 minutes. remove cakes from pans to wire racks and cool completely, about 1 hour. 
+
+place one layer on a serving place and spread 1 cup key lime frosting over top. add second layer and spread top with 1 cup key lime frosting. add third cake layer and spread top and sides with remaining frosting. top with sugared key limes and cranberries, garnish with mint leaves if desired. (icing)beat cream cheese and butter with an electric mixer on medium until smooth, about 2 minutes. gradually add powdered sugar and beat until smooth. add zest, juice, vanilla and salt, and beat until smooth. add milk, 1 tbsp at a time and beat to desired consistency. ]'
+
+
+select * from wcgl.recipes_tables where name = 'Katsudon';
