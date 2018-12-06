@@ -13,6 +13,7 @@ module.exports = function(app) {
 
   // Load Create page
   app.get("/create", function(req, res) {
+    console.log('create route');
     res.render("create");
   });
 
