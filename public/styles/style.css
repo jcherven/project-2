@@ -1,0 +1,20 @@
+body {
+    background-image: url("../../views/images/board-bunch-cooking-349609.jpg");
+    background-size: cover; 
+    /* cursor: url("/Tiny\ Heart\ Food\ Cursors\ by\ M∀RTE\ \(2\)/") */
+}
+
+#create{
+    background-image: url("../../views/images/agriculture-bunch-cooking-606540.jpg");
+    background-size: cover;
+}
+
+p {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 40px;
+    color: darkgreen;
+}
+
+.card {
+    margin: 20px;
+}
