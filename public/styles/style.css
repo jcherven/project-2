@@ -18,3 +18,45 @@ p {
 .card {
     margin: 20px;
 }
+
+/* Front-page */
+.parallax-container{
+    height: 100vh;
+    width: 100%;
+    color: black;
+}
+
+.logo{
+    color:whitesmoke;
+}
+
+.background-1{
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+}
+
+.section{
+    text-align: center;
+    padding: 25px;
+    height: 100vh;
+    width: 100%;
+}
+
+.recipies{
+    font-size: 30px;
+
+}
+
+footer{
+    text-align: center;
+    color: white;
+    height: 100px;
+    width: 100%;
+}
+
+footer p{
+    font: 15px;
+    padding: 25px 0 0 0;
+    color: white;
+}
