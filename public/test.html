@@ -17,6 +17,7 @@
         <div class="nav-wrapper #0d47a1 blue darken-4">
           <a href="#!" class="brand-logo">Logo</a>
           <ul class="right hide-on-med-and-down">
+            <li><a href="create.html" class="btn #0d47a1 blue darken-4 tooltipped" data-position="bottom" data-tooltip="I am a tooltip"><i class="material-icons">search</i></a></li>  
             <li><a href="login.html"><i class="material-icons">search</i></a></li>
             <li><a href="create.html"><i class="material-icons">local_dining</i></a></li>
             <li><a href="https://github.com/jcherven/project-2"><i class="material-icons">mail</i></a></li>
@@ -64,5 +65,8 @@
 <script>
   $(document).ready(function(){
     $('.parallax').parallax();
+  });
+  $(document).ready(function(isHovered){
+    $('.tooltipped').tooltip();
   });
 </script>
