@@ -3,6 +3,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all examples
   app.get("/api/recipes_tables", function(req, res) {
+    console.log(db.example.Recipes);
     db.Recipes.findAll({}).then(function(dbExamples) {
       res.json(dbExamples);
     });
