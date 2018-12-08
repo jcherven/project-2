@@ -1,5 +1,5 @@
 use wcgl;
-INSERT INTO recipes_tables(recipeName, ingredients, steps) 
+INSERT INTO recipes(recipeName, ingredients, steps) 
 VALUES (
     'Katsudon', 
     '[
@@ -39,7 +39,7 @@ VALUES (
     ]'
 );
 
-INSERT INTO recipes_tables(recipeName, ingredients, steps) 
+INSERT INTO recipes(recipeName, ingredients, steps) 
 VALUES ('Wookie Cookies',
     '[2 1/4 cups all-purpose flour
 1 teaspoon baking soda
@@ -59,7 +59,7 @@ Scoop up a rounded tablespoonful of the dough and drop onto a baking sheet. Repe
 Using pot holders, put the baking sheets in the oven. Bake until golden brown, about 10 minutes.
 Again, using pot holders, remove the baking sheets from the oven. Lift the cookies from the baking sheets with a spatula, and place on cooling racks. Let cool completely.]');
 
-INSERT INTO recipes_tables(recipeName, ingredients, steps) 
+INSERT INTO recipes(recipeName, ingredients, steps) 
 VALUES ('Rum Cake with Key Lime Buttercream Icing','[(cake)
 2 cups granulated sugar
 1 cup unsalted butter, softened
@@ -86,4 +86,4 @@ using clean, dry, beaters, beat egg whites in a separate bowl until stiff peaks 
 place one layer on a serving place and spread 1 cup key lime frosting over top. add second layer and spread top with 1 cup key lime frosting. add third cake layer and spread top and sides with remaining frosting. top with sugared key limes and cranberries, garnish with mint leaves if desired. (icing)beat cream cheese and butter with an electric mixer on medium until smooth, about 2 minutes. gradually add powdered sugar and beat until smooth. add zest, juice, vanilla and salt, and beat until smooth. add milk, 1 tbsp at a time and beat to desired consistency. ]'
 
 
-select * from wcgl.recipes_tables where name = 'Katsudon';
+select * from wcgl.recipes where name = 'Katsudon';
