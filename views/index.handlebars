@@ -1,33 +1,55 @@
 <div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each wgcl}}
-          <li data-id="{{id}}" class="list-group-item">
-            <a href="recipes_tables/{{this.id}}">{{examples}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+  <!--Nav-->
+    <nav>
+        <div class="nav-wrapper #0d47a1 blue darken-4">
+          <a href="#!" class="brand-logo">Logo</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="login.handlebars"><i class="material-icons">group</i></a></li>
+            <li><a href="create.handlebars"><i class="material-icons">local_dining</i></a></li>
+            <li><a href="https://github.com/jcherven/project-2"><i class="material-icons">mail</i></a></li>
+          </ul>
+        </div>
+      </nav>
+  
+  <!--Main div-->
+    <div class="parallax-container center valign-wrapper">
+      <div class="container logo">
+        <div class="row">
+            <h2>Let's Get Cookin' Good Lookin'</h2>
+            <p class="logo">Just search for recipes below or add your own!</p>
+            <a class="waves-effect waves-light btn-large #0d47a1 blue darken-4">Search</a>
+        </div>
+      </div>
+        <div class="parallax"><img src="public/images/agriculture-bunch-cooking-606540.jpg"></div>
+      </div>
+  <!--Recipes section-->
+      <div class="section white">
+        <div class="row container recipes">
+          <h2>"Let's start cracking!"</h2>
+                <div class="col l6">Popular recipes</div>
+                <div class="col l6">User recipes</div>
+            </div>
+        </div>
+      </div>
+  
+      <div class="parallax-container">
+        <div class="parallax"><img src="public/images/aroma-chili-condiments-357743.jpg"></div>
+      </div>
+
+<!--Footer-->
+  <footer class="#1a237e indigo darken-4">
+    <div class="container">
+      <div class="row">
+          <p>Group 5, UCF Coding Bootcamp. &copy; 2018</p>
       </div>
     </div>
-  </div>
-</div>
+  </footer>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/materialize.min.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>
