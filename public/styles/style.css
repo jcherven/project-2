@@ -1,11 +1,11 @@
-/* body {
-    background-image: url("../views/images/board-bunch-cooking-349609.jpg");
-    background-size: cover; 
-} */
+ body { 
+     cursor: url("../images/Carrot.png");
+}
 
 #create{
     background-image: url("../images/agriculture-bunch-cooking-606540.jpg");
     background-size: cover;
+    cursor: url("../images/Carrot.png");
 }
 
 p {
