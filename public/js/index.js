@@ -27,7 +27,7 @@ $(document).ready(function() {
 
   function submitRecipe(post) {
     $.post("/api/new", post, function() {
-      window.location.href = "/index";
+      window.location.href = "/";
     });
   }
 });

@@ -2,26 +2,24 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/recipes_tables", function(req, res) {
-    console.log(db.example.Recipes);
-    db.Recipes.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  app.get("/api/recipes", function(req, res) {
+    console.log(db.Recipe);
+    db.Recipe.findAll({}).then(function(body) {
+      res.json(body);
     });
   });
 
   // Create a new example
-  app.post("/api/recipes_tables", function(req, res) {
-    db.Recipes.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  app.post("/api/recipes", function(req, res) {
+    db.Recipe.create(req.body).then(function(body) {
+      res.json(body);
     });
   });
 
   // Delete an example by id
-  app.delete("/api/recipes_tables/:id", function(req, res) {
-    db.Recipes.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.json(dbExample);
+  app.delete("/api/recipes/:id", function(req, res) {
+    db.Recipes.destroy({ where: { id: req.params.id } }).then(function(rest) {
+      res.json(rest);
     });
   });
 };
