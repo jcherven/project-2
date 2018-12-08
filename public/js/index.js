@@ -2,21 +2,30 @@
 $(document).ready(function() {
   console.log("testing");
 
-  $(".btn").on("click", function(event) {
+  var newRecipe = {
+    recipeName: $("#recipe_title").val(),
+    ingredients: $("#ingredients").val(),
+    steps: $("#steps").val()
+  };
+
+  console.log(newRecipe);
+
+  $(".btn").on("click", handleFormSubmit);
+
+  function handleFormSubmit(event) {
     event.preventDefault();
-    var newRecipe = {
-      name: $("#recipe_title")
-        .val()
-        .trim(),
-      ingredients: $("#ingredients")
-        .val()
-        .trim(),
-      steps: $("#steps")
-        .val()
-        .trim()
-    };
-    console.log(newRecipe);
-  });
+    if (!recipeName || !ingredients || !steps) {
+      return;
+    }
+
+    submitRecipe(newRecipe);
+  }
+
+  function submitRecipe(post) {
+    $.post("/api/new", post, function() {
+      window.location.href = "/index";
+    });
+  }
 });
 // The API object contains methods for each kind of request we'll make
 // var API = {
@@ -110,4 +119,4 @@ $(document).ready(function() {
 
 // // Add event listeners to the submit and delete buttons
 // $submitBtn.on("click", handleFormSubmit);
-// $exampleList.on("click", ".delete", handleDeleteBtnClick);
+// $exampleList.on("click", ".delete", handleDeleteBtnClick)
