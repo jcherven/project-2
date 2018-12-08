@@ -1,7 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
-const helmet = require("helmet");
+var helmet = require("helmet");
 
 var db = require("./models");
 

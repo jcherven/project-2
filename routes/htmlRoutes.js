@@ -3,23 +3,23 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Recipe.findAll({}).then(function(recipes) {
       res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
+        msg: "Welcome!"
       });
+      console.log(recipes);
     });
   });
 
   // Load Create page
   app.get("/create", function(req, res) {
-    console.log('create route');
+    console.log("create route");
     res.render("create");
   });
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+    db.Recipes.findOne({ where: { id: req.params.id } }).then(function(
       dbExample
     ) {
       res.render("example", {
