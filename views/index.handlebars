@@ -1,56 +1,86 @@
 <div id="home">
   <!--Nav-->
-    <nav>
-        <div class="nav-wrapper #0d47a1 blue darken-4">
-          <a href="#!" class="brand-logo">Logo</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="login"><i class="material-icons">group</i></a></li>
-            <li><a href="create"><i class="material-icons">local_dining</i></a></li>
-            <li><a href="https://github.com/jcherven/project-2"><i class="material-icons">mail</i></a></li>
-          </ul>
-        </div>
-      </nav>
-  
-  <!--Main div-->
-    <div class="parallax-container center valign-wrapper">
-      <div class="container logo">
-        <div class="row">
-            <h2>What's Cookin' Good Lookin'?</h2>
-            <p class="logo">Just search for recipes below or add your own!</p>
-            <br>
-            <a class="waves-effect waves-light btn-large #0d47a1 blue darken-4">Search</a>
-        </div>
-      </div>
-        <div class="parallax"><img src="public/images/agriculture-bunch-cooking-606540.jpg"></div>
-      </div>
-  <!--Recipes section-->
-      <div class="section white">
-        <div class="row container recipes">
-          <h2>"Let's start cracking!"</h2>
-                <div class="popular col l6">Popular recipes</div>
-                <div class="user col l6">User recipes</div>
-            </div>
-        </div>
-      </div>
-  
-      <div class="parallax-container">
-        <div class="parallax"><img src="public/images/aroma-chili-condiments-357743.jpg"></div>
-      </div>
+  <nav>
+    <div class="nav-wrapper #0d47a1 blue darken-4">
+      <a href="#!" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="login"><i class="material-icons">group</i></a></li>
+        <li><a href="create"><i class="material-icons">local_dining</i></a></li>
+        <li><a href="https://github.com/jcherven/project-2"><i class="material-icons">mail</i></a></li>
+      </ul>
+    </div>
+  </nav>
 
-<!--Footer-->
-  <footer class="#1a237e indigo darken-4">
-    <div class="container">
+  <!--Main div-->
+  <div class="parallax-container center valign-wrapper">
+    <div class="container logo">
       <div class="row">
-          <p>Group 5, UCF Coding Bootcamp. &copy; 2018</p>
+        <h2>What's Cookin' Good Lookin'?</h2>
+        <p class="logo">Just search for recipes below or add your own!</p>
+        <br>
+        <a class="waves-effect waves-light btn-large #0d47a1 blue darken-4">Search</a>
       </div>
     </div>
-  </footer>
+    <div class="parallax"><img src="public/images/agriculture-bunch-cooking-606540.jpg"></div>
+  </div>
+  <!--Recipes section-->
+  <div class="section white">
+    <div class="row container recipes">
+      <h2>Let's start cracking!</h2>
+      <div class="popular col l6">
+        <h6> Popular Recipes </h6>
+        <div class="card">
+          <div class="card-content">
+            <p><span id="recipe-name"></span></p>
+          </div>
+          <div class="card-content grey lighten-4">
+            <div class="row">
+              <div class="recipe-info col s6">
+                <p id="card-headers">Ingredients:</p><span id="pop-recipe-ingredients"></span>
+                <p id="card-headers">Steps:</p><span id="pop-recipe-steps"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user col l6">
+        <h6>User Submitted Recipes</h6>
+        <div class="card">
+          <div class="card-content">
+            <p><span id="recipe-name"></span></p>
+          </div>
+          <div class="card-content grey lighten-4">
+            <div class="row">
+              <div class="recipe-info col s6">
+                <p id="card-headers">Ingredients:</p><span id="pop-recipe-ingredients"></span>
+                <p id="card-headers">Steps:</p><span id="pop-recipe-steps"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="parallax-container">
+  <div class="parallax"><img src="public/images/aroma-chili-condiments-357743.jpg"></div>
+</div>
+
+<!--Footer-->
+<footer class="#1a237e indigo darken-4">
+  <div class="container">
+    <div class="row">
+      <p>Group 5, UCF Coding Bootcamp. &copy; 2018</p>
+    </div>
+  </div>
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="/js/materialize.min.js"></script>
 <script type="text/javascript" src="/js/index.js"></script>
 <script>
-  $(document).ready(function(){
+  $(document).ready(function () {
     $('.parallax').parallax();
   });
 </script>
