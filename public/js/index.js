@@ -3,12 +3,6 @@ $(document).ready(function() {
   M.updateTextFields();
   console.log("testing");
 
-  // var newRecipe = {
-  //   recipeName: $("#recipe_title").val(),
-  //   ingredients: $("#ingredients").val(),
-  //   steps: $("#steps").val()
-  // };
-
   $(".btn").on("click", handleFormSubmit);
 
   function handleFormSubmit(event) {
@@ -27,14 +21,13 @@ $(document).ready(function() {
 
     if (!newRecipe.recipeName || !newRecipe.ingredients || !newRecipe.steps) {
       return;
+    } else {
+      $.ajax("/api/recipes", {
+        method: "POST",
+        data: newRecipe
+      }).then(function() {
+        location.reload();
+      });
     }
-    console.log(newRecipe);
-    submitRecipe(newRecipe);
-  }
-
-  function submitRecipe(post) {
-    $.post("/api/new", post, function() {
-      window.location.href = "/index";
-    });
   }
 });
