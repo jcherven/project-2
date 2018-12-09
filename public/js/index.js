@@ -1,7 +1,6 @@
 // Get references to page elements
 $(document).ready(function() {
-  console.log("testing");
-
+  //how to handle the submit on the create form, sends data to the database
   $(".btn").on("click", handleFormSubmit);
 
   function handleFormSubmit(event) {
@@ -9,16 +8,11 @@ $(document).ready(function() {
     var newRecipe = {
       recipeName: $("#recipe_title").val(),
       ingredients: $("#ingredients").val(),
-      steps: $("#steps").val()
+      steps: $("#steps").val(),
+      keyword: $("#keyword").val()
     };
-    // var newRecipe = {
-    //   recipeName: $("#recipe_title").val(),
-    //   ingredients: $("#ingredients").val().split("\n"),
-    //   steps: $("#steps").val().split("\n")
-    // };
-    console.log(newRecipe);
 
-    if (!newRecipe.recipeName || !newRecipe.ingredients || !newRecipe.steps) {
+    if (!newRecipe.recipeName || !newRecipe.ingredients || !newRecipe.steps || !newRecipe.keyword) {
       return;
     } else {
       $.ajax("/api/recipes", {
@@ -29,4 +23,10 @@ $(document).ready(function() {
       });
     }
   }
+
+  // function handleFormSubmit(event) {
+  //   event.preventDefault();
+  //   var searchTerm= $("#search").val().trim();
+
+  // }
 });

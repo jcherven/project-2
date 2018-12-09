@@ -25,6 +25,10 @@ p {
     color: darkgreen;
 }
 
+#search {
+    color: white;
+}
+
 #card-headers{
     font-family: 'Caveat Brush', cursive;
     font-size: 20px;
