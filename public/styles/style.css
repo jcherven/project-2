@@ -8,12 +8,28 @@
     cursor: url("../images/Carrot.png");
 }
 
+h2 {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 60px;
+    color: salmon;
+}
+
+h6{
+    font-family: 'Caveat Brush', cursive;
+    color: darkgreen;
+}
+
 p {
     font-family: 'Caveat Brush', cursive;
     font-size: 40px;
     color: darkgreen;
 }
 
+#card-headers{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 20px;
+    color: darkgreen;
+}
 .card {
     margin: 20px;
 }
