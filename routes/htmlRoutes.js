@@ -3,8 +3,10 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Recipe.findAll({}).then(function(recipes) {
-      res.render("index");
+    db.Recipe.findAll({}).then(function(dbRecipes) {
+      res.render("index", {
+        recipes: dbRecipes
+      });
     });
   });
 
@@ -13,14 +15,18 @@ module.exports = function(app) {
     res.render("create");
   });
 
-  //load login page
+  // Load login page
   app.get("/login", function(req, res) {
     res.render("login");
   });
 
-  //load results page
-  app.get("/results", function(req, res) {
-    res.render("results");
+  // Load example page and pass in an example by id
+  app.get("/recipe/:id", function(req, res) {
+    db.Recipe.findOne({ where: { id: req.params.id } }).then(function(recipes) {
+      res.render("recipe", {
+        example: dbRecipe
+      });
+    });
   });
 
   // Render 404 page for any unmatched routes

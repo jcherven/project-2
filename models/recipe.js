@@ -1,8 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define("Recipe", {
+  var Recipe = sequelize.define("Recipe", {
     recipeName: DataTypes.STRING,
-    ingredients: DataTypes.JSON,
-    steps: DataTypes.JSON,
+    ingredients: DataTypes.TEXT,
+    steps: DataTypes.TEXT,
     keyword: DataTypes.STRING
   });
+  return Recipe;
 };

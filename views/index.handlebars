@@ -34,8 +34,16 @@
   <div class="section white">
     <div class="row container recipes">
       <h2>Let's start cracking!</h2>
-      <div class="popular col l6">
-        <h6> Popular Recipes </h6>
+      <h6>All Current Recipes</h6>
+      <div class="all-recipes col 32">
+          <ul id="recipes-list">
+              {{#each recipes}}
+                 <li data-idi="{{this.id}}" class="list-group-item">
+                     <a href="recipe/{{this.id}}">{{this.recipeName}}</a>
+                 </li> 
+              {{/each}}
+          </ul>
+        {{!-- <h6> Popular Recipes </h6>
         <div class="card">
           <div class="card-content">
             <p><span id="recipe-name-popular"></span></p>
@@ -65,7 +73,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
   </div>
 </div>

@@ -2,15 +2,15 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "wcgl",
-    "host": "127.0.0.1",
+    "database": "recipe_test",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "root",
-    "database": "wcgl",
-    "host": "127.0.0.1",
+    "database": "recipe_prod",
+    "host": "localhost",
     "dialect": "mysql",
     "logging": false
   },
