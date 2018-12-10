@@ -167,4 +167,3 @@ VALUES (
 );
 */
 
-select * from recipe_test.recipes;
